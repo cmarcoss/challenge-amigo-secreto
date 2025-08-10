@@ -6,4 +6,10 @@ function agregarAmigo()
 {
     let nombre = document.getElementById("amigo").value.trim();
     console.log(nombre);
+    if (nombre === "") 
+    {
+        alert("Por favor incerte un nombre.");
+        return;
+    } else (amigos.push(nombre))
+    console.log(amigos)
 }
