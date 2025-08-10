@@ -12,4 +12,10 @@ function agregarAmigo()
         return;
     } else (amigos.push(nombre))
     console.log(amigos)
+    limpiarCaja()
+}
+//limpiar el campo/caja
+function limpiarCaja()
+{
+    document.querySelector('#amigo').value = '';  
 }
