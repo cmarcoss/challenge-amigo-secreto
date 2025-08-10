@@ -13,6 +13,7 @@ function agregarAmigo()
     } else (amigos.push(nombre))
     console.log(amigos)
     limpiarCaja()
+    mostrarLista()
 }
 //limpiar el campo/caja
 function limpiarCaja()
