@@ -1,6 +1,6 @@
 //declaracion de array para almacenar los nombres
 let amigos=[];
-let amigosSorteados = []
+let amigosSorteados =[];
 
 //funcion agregar amigos
 function agregarAmigo()
@@ -11,7 +11,9 @@ function agregarAmigo()
     {
         alert("Por favor incerte un nombre.");
         return;
-    } else if (amigos.includes(nombre)) {
+    } 
+    else if (amigos.includes(nombre)) 
+    {
         alert("Ese nombre ya fue agregado.");
         limpiarCaja();
         return;
@@ -27,7 +29,8 @@ function limpiarCaja()
     document.querySelector('#amigo').value = '';
 }
 //mostrar lista de amigos
-function mostrarLista() {
+function mostrarLista() 
+{
     // elemento UL donde mostraremos la lista
     let lista = document.getElementById("listaAmigos");
 
@@ -35,25 +38,30 @@ function mostrarLista() {
     lista.innerHTML = "";
 
     //Recorrer el array amigos 
-    for (let i = 0; i < amigos.length; i++) {
-        // Crear un nuevo elemento <li> por cada amigo
-        let li = document.createElement("li");
+    for (let i = 0; i < amigos.length; i++) 
+    {
+            // Crear un nuevo elemento <li> por cada amigo
+            let li = document.createElement("li");
 
-        // Si el amigo ya fue sorteado, mostrar tachado
-        if (amigosSorteados.includes(amigos[i])) {
-            li.innerHTML = `<s>${amigos[i]}</s>`;
-        } else {
+            // Si el amigo ya fue sorteado, mostrar tachado
+            if (amigosSorteados.includes(amigos[i])) 
+            {
+                    li.innerHTML = `<s>${amigos[i]}</s>`;
+            } 
+            else 
+            {
             li.textContent = amigos[i];
-        }
+            }
 
-        //Agregar el <li> dentro del <ul>
+            //Agregar el <li> dentro del <ul>
         lista.appendChild(li);
     }
 }
 function sortearAmigo() 
 {
     // Validar que haya amigos disponibles
-    if (amigos.length === 0) {
+    if (amigos.length === 0) 
+    {
         alert("No hay amigos en la lista para sortear.");
         return;
     }
@@ -61,7 +69,8 @@ function sortearAmigo()
     // Filtrar amigos que no han sido sorteados
     let amigosNoSorteados = amigos.filter(amigo => !amigosSorteados.includes(amigo));
 
-    if (amigosNoSorteados.length === 0) {
+    if (amigosNoSorteados.length === 0) 
+    {
         alert("Todos los amigos ya han sido sorteados.");
         return;
     }
@@ -75,6 +84,6 @@ function sortearAmigo()
 
     // Mostrar el resultado
     document.getElementById("resultado").innerHTML = "El amigo sorteado es: <strong>" + amigoSorteado + "</strong>";
-
-    mostrarLista(); // Actualizar la lista para tachar el nombre
+    // Actualizar la lista para tachar el nombre
+    mostrarLista();
 }
