@@ -51,12 +51,24 @@ function sortearAmigo()
         alert("No hay amigos en la lista para sortear.");
         return;
     }
-    // Generar un índice aleatorio
-    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
-    // Obtener el nombre sorteado
-    let amigoSorteado = amigos[indiceAleatorio];
+
+    // Filtrar amigos que no han sido sorteados
+    let amigosNoSorteados = amigos.filter(amigo => !amigosSorteados.includes(amigo));
+
+    if (amigosNoSorteados.length === 0) {
+        alert("Todos los amigos ya han sido sorteados.");
+        return;
+    }
+
+    // Generar un índice aleatorio entre los no sorteados
+    let indiceAleatorio = Math.floor(Math.random() * amigosNoSorteados.length);
+    let amigoSorteado = amigosNoSorteados[indiceAleatorio];
+
+    // Agregar el amigo sorteado a la lista de sorteados
+    amigosSorteados.push(amigoSorteado);
+
     // Mostrar el resultado
     document.getElementById("resultado").innerHTML = "El amigo sorteado es: <strong>" + amigoSorteado + "</strong>";
-    
+
     
 }
