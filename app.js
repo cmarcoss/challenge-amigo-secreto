@@ -10,7 +10,12 @@ function agregarAmigo()
     {
         alert("Por favor incerte un nombre.");
         return;
-    } else (amigos.push(nombre))
+    } else if (amigos.includes(nombre)) {
+        alert("Ese nombre ya fue agregado.");
+        limpiarCaja();
+        return;
+    }
+    amigos.push(nombre);
     console.log(amigos)
     limpiarCaja()
     mostrarLista()
@@ -51,5 +56,7 @@ function sortearAmigo()
     let amigoSorteado = amigos[indiceAleatorio];
     // Mostrar el resultado
     document.getElementById("resultado").innerHTML = "El amigo sorteado es: <strong>" + amigoSorteado + "</strong>";
+    // Tachar amigo sorteado de la lista
+    amigos.splice(indiceAleatorio, 1);
     
 }
