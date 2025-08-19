@@ -38,8 +38,13 @@ function mostrarLista() {
         lista.appendChild(li);
     }
 }
-function sortearAmigo() {
+function sortearAmigo() 
+{
     // Validar que haya amigos disponibles
+    if (amigos.length === 0) {
+        alert("No hay amigos en la lista para sortear.");
+        return;
+    }
     // Generar un índice aleatorio
     // Obtener el nombre sorteado
     // Mostrar el resultado
