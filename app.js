@@ -1,5 +1,6 @@
 //declaracion de array para almacenar los nombres
 let amigos=[];
+let amigosSorteados = []
 
 //funcion agregar amigos
 function agregarAmigo()
@@ -56,7 +57,6 @@ function sortearAmigo()
     let amigoSorteado = amigos[indiceAleatorio];
     // Mostrar el resultado
     document.getElementById("resultado").innerHTML = "El amigo sorteado es: <strong>" + amigoSorteado + "</strong>";
-    // Tachar amigo sorteado de la lista
-    amigos.splice(indiceAleatorio, 1);
+    
     
 }
