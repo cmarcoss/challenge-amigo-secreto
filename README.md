@@ -1,4 +1,4 @@
-<img width="463" height="225" alt="Recurso 1@2x" src="https://github.com/user-attachments/assets/3f397a52-7d1a-4db4-9242-b6fe1aabfdea" />
+<img width="926" height="450" alt="Recurso 1@2x" src="https://github.com/user-attachments/assets/3f397a52-7d1a-4db4-9242-b6fe1aabfdea" />
 
 <h1># challenge-amigo-secreto</h1>
 Este proyecto es un juego para sortear de un grupo de amigos a quién le corresponde regalarle, ideal para fiestas o celebraciones.
