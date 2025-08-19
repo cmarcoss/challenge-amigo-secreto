@@ -38,7 +38,13 @@ function mostrarLista() {
     for (let i = 0; i < amigos.length; i++) {
         // Crear un nuevo elemento <li> por cada amigo
         let li = document.createElement("li");
-        li.textContent = amigos[i]; // Asignar el nombre como texto
+
+        // Si el amigo ya fue sorteado, mostrar tachado
+        if (amigosSorteados.includes(amigos[i])) {
+            li.innerHTML = `<s>${amigos[i]}</s>`;
+        } else {
+            li.textContent = amigos[i];
+        }
 
         //Agregar el <li> dentro del <ul>
         lista.appendChild(li);
@@ -70,5 +76,5 @@ function sortearAmigo()
     // Mostrar el resultado
     document.getElementById("resultado").innerHTML = "El amigo sorteado es: <strong>" + amigoSorteado + "</strong>";
 
-    
+    mostrarLista(); // Actualizar la lista para tachar el nombre
 }
