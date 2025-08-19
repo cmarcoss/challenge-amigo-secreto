@@ -38,3 +38,10 @@ function mostrarLista() {
         lista.appendChild(li);
     }
 }
+function sortearAmigo() {
+    // Validar que haya amigos disponibles
+    // Generar un índice aleatorio
+    // Obtener el nombre sorteado
+    // Mostrar el resultado
+
+}
