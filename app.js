@@ -46,7 +46,9 @@ function sortearAmigo()
         return;
     }
     // Generar un índice aleatorio
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
     // Obtener el nombre sorteado
+    
     // Mostrar el resultado
-
+    
 }
